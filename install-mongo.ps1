@@ -19,6 +19,7 @@ md "$mongoDbPath\data\db"
 [System.IO.File]::AppendAllText("$mongoDbConfigPath", "logpath=C:\MongoDB\log\mongo.log`r`n")
 [System.IO.File]::AppendAllText("$mongoDbConfigPath", "smallfiles=true`r`n")
 [System.IO.File]::AppendAllText("$mongoDbConfigPath", "noprealloc=true`r`n")
+[System.IO.File]::AppendAllText("$mongoDbConfigPath", "bind_ip=0.0.0.0`r`n")
 
 $webClient = New-Object System.Net.WebClient 
 $webClient.DownloadFile($url,$zipFile)
