@@ -1,8 +1,17 @@
+<#
+    .SYNOPSIS
+    	Allow 27017 port access in OS firewall
+        Download and install mongodb
+#>
+
+#Allow 27017 port in OS Firewall
+netsh advfirewall firewall add rule name="mongodb" dir=in action=allow protocol=TCP localport=27017
+
 $mongoDbPath = "C:\MongoDB" 
 $mongoDbConfigPath = "$mongoDbPath\mongod.cfg"
-$url = "http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2008plus-2.4.9.zip" 
+$url = "http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2008plus-3.4.6.zip" 
 $zipFile = "$mongoDbPath\mongo.zip" 
-$unzippedFolderContent ="$mongoDbPath\mongodb-win32-x86_64-2008plus-2.4.9"
+$unzippedFolderContent ="$mongoDbPath\mongodb-win32-x86_64-2008plus-3.4.6.zip"
 
 if ((Test-Path -path $mongoDbPath) -eq $True) 
 { 
