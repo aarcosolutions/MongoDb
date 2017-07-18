@@ -11,7 +11,7 @@ $mongoDbPath = "C:\MongoDB"
 $mongoDbConfigPath = "$mongoDbPath\mongod.cfg"
 $url = "http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2008plus-3.4.6.zip" 
 $zipFile = "$mongoDbPath\mongo.zip" 
-$unzippedFolderContent ="$mongoDbPath\mongodb-win32-x86_64-2008plus-3.4.6.zip"
+$unzippedFolderContent ="$mongoDbPath\mongodb-win32-x86_64-2008plus-3.4.6"
 
 if ((Test-Path -path $mongoDbPath) -eq $True) 
 { 
